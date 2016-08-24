@@ -883,8 +883,8 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio audio bluetooth gps nfc qcom_diag
 
-service netmgrd /system/bin/netmgrd
-    class main
+#service netmgrd /system/bin/netmgrd
+#    class main
 
 service ipacm-diag /system/bin/ipacm-diag
     class main
@@ -1305,6 +1305,11 @@ service iprenew_eth0 /system/bin/dhcpcd -n
     class late_start
     disabled
     oneshot
+
+# Data Switch hack
+service netmgrd /system/bin/sh /system/etc/netmgrd_control.sh
+   seclabel u:r:netmgrd:s0
+   class main
 
 service ifaadaemon /system/bin/ifaadaemon
     class late_start
