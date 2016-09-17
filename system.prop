@@ -1,7 +1,4 @@
-persist.service.adb.enable=1                                                    
-persist.service.debuggable=1
-ro.adb.secure=0
-persist.sys.usb.config=mtp,adb
+ro.display.series=OnePlus 3
 
 # Audio
 ro.qc.sdk.audio.ssr=false
@@ -132,3 +129,10 @@ persist.timed.enable=true
 
 # Wifi
 wifi.interface=wlan0
+
+#ADB
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+ro.adb.secure=0
+persist.sys.usb.config=mtp,adb
+
