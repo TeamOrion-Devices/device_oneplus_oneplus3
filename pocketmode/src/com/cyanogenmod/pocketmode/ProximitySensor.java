@@ -22,7 +22,8 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
-import org.cyanogenmod.internal.util.FileUtils;
+import java.io.File;
+import org.cyanogenmod.hardware.util.FileUtils;
 
 public class ProximitySensor implements SensorEventListener {
 
@@ -45,7 +46,7 @@ public class ProximitySensor implements SensorEventListener {
     @Override
     public void onSensorChanged(SensorEvent event) {
         boolean isNear = event.values[0] < mSensor.getMaximumRange();
-        if (FileUtils.isFileWritable(FPC_FILE)) {
+        if (new File(FPC_FILE).exists()) {
             FileUtils.writeLine(FPC_FILE, isNear ? "1" : "0");
         }
     }
