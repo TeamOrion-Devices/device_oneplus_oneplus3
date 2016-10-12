@@ -21,6 +21,7 @@ $(call inherit-product, device/oneplus/oneplus3/device.mk)
 
 # Inherit some common Tesla stuff.
 $(call inherit-product, vendor/tesla/config/common_full_phone.mk)
+$(call inherit-product, vendor/tesla/config/caf_fw.mk)
 
 PRODUCT_NAME := tesla_oneplus3
 PRODUCT_DEVICE := oneplus3
