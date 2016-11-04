@@ -20,13 +20,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/oneplus3/device.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/tesla/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/orion/config/nfc_enhanced.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/tesla/config/common_full_phone.mk)
-$(call inherit-product, vendor/tesla/config/caf_fw.mk)
+$(call inherit-product, vendor/orion/config/common_full_phone.mk)
+$(call inherit-product, vendor/orion/config/caf_fw.mk)
 
-PRODUCT_NAME := tesla_oneplus3
+PRODUCT_NAME := orion_oneplus3
 PRODUCT_DEVICE := oneplus3
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
