@@ -145,6 +145,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# Camera
+  PRODUCT_PACKAGES += \
+    Snap \
+    libcamera_shim
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8996 \
